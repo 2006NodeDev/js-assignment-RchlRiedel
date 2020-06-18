@@ -1,23 +1,33 @@
 /* 4. Factorial
 Define function: factorial(someNum)
 Use recursion to compute and return the factorial of someNum.  */
+
 function factorial(sumNum) {
-    
-    if (sumNum <= 1) {
+    if (sumNum == 1 ) {
         return 1
+    } else if (sumNum < 1) {
+        return "Please input a positve number!";  
+    } else {
+        return sumNum * factorial(sumNum - 1)
     } 
-    else {
-        return sumNum * factorial(sumNum -1)
+}
+
+function factorialImproved(sumNum){
+    let a = 1, b = 1, c
+    if (sumNum == 1 ) {
+        return 1
+    } else if (sumNum > 1) {
+        for (i = 1; i <= sumNum; i ++){
+            c = a * b 
+            a ++
+            b = c       
+        }
+        return c
+    } else {
+        return "Please input positive number!"
     }
 }
 
-//Factorial of just one number
-var n = 4
+var n = 8
 console.log(`${n}! = ${factorial(n)}`);
-
-//Factorial of 0-10
-// for (i = 0; i <=10; i++){
-//     console.log(`${i}! = ${factorial(i)}`);
-// }
-
-//Need to push!!
+console.log(`${n}! = ${factorialImproved(n)}`);
