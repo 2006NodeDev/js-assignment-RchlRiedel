@@ -6,7 +6,6 @@ function objectProperties(someObj) {
         console.log(`${element}: ${someObj[element]}`);
     }
     console.log();
-    
 }
 
 function Pet (name, age, species, breed, coloring, cutenessLevel, characteristics) {
